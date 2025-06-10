@@ -7,10 +7,10 @@ const subscriptionRouter = Router();
 subscriptionRouter.get("/", authorise, isAdmin, getSubscriptions);
 subscriptionRouter.get("/details", authorise, getSubscriptionDetails);
 subscriptionRouter.post("/", authorise, createSubscription);
-subscriptionRouter.put("/:id", authorise, isAdmin, updateSubscription); // test
-subscriptionRouter.delete("/:id", authorise, deleteSubscription); // test
+subscriptionRouter.put("/:id", authorise, isAdmin, updateSubscription);
+subscriptionRouter.delete("/:id", authorise, deleteSubscription);
 subscriptionRouter.get("/user/:id", authorise, getUserSubscription);
-subscriptionRouter.put("/:id/cancel", authorise, cancelSubscription); // test
-subscriptionRouter.get("/upcoming-renewals", authorise, upcomingSubscriptions); // test
+subscriptionRouter.put("/:id/cancel", authorise, cancelSubscription);
+subscriptionRouter.get("/upcoming-renewals", authorise, upcomingSubscriptions);
 
 export default subscriptionRouter;
