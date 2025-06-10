@@ -33,7 +33,7 @@ export const createSubscription = async (req, res, next) => {
             ...req.body,
             user: req.user._id,
         })
-        // change dates if no notifications are sent
+        
       const { workflowRunId } = await workflowClient.trigger({
             url: `${SERVER_URL}/api/v1/workflows/subscription/reminder`, 
             body: {                       
